@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <author>
-    <name>John Doe</name>
+    <name>Jeff Sie</name>
   </author>
   <generator uri="https://hexo.io/">Hexo</generator>
   <icon>https://jeffsie180.github.io/icon.png</icon>
   <id>https://jeffsie180.github.io/</id>
   <link href="https://jeffsie180.github.io/" rel="alternate"/>
   <link href="https://jeffsie180.github.io/atom.xml" rel="self"/>
-  <rights>All rights reserved 2026, John Doe</rights>
-  <title>Hexo</title>
+  <rights>All rights reserved 2026, Jeff Sie</rights>
+  <subtitle>Jeff 的個人技術部落格</subtitle>
+  <title>Jeff's Blog</title>
   <updated>2026-02-11T01:17:46.128Z</updated>
   <entry>
     <author>
-      <name>John Doe</name>
+      <name>Jeff Sie</name>
     </author>
     <id>https://jeffsie180.github.io/2026/02/11/hello-world/</id>
     <link href="https://jeffsie180.github.io/2026/02/11/hello-world/"/>
