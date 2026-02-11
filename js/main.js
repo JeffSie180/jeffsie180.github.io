@@ -675,7 +675,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'rightside-config': item => { // Show or hide rightside-hide-btn
       const hideLayout = item.firstElementChild
-      if (hideLayout.classList.contains('show')) {
+      if (!hideLayout.classList.contains('show')) {
         hideLayout.classList.add('status')
         setTimeout(() => {
           hideLayout.classList.remove('status')
@@ -686,6 +686,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'go-up': () => { // Back to top
       btf.scrollToDest(0, 500)
+    },
+    'go-down': () => { // Go to bottom
+      btf.scrollToDest(document.querySelector('footer').offsetTop, 500)
     },
     'hide-aside-btn': () => { // Hide aside
       const $htmlDom = document.documentElement.classList
