@@ -4,10 +4,10 @@
     <name>Jeff Sie</name>
   </author>
   <generator uri="https://hexo.io/">Hexo</generator>
-  <icon>https://jeffsie180.github.io/icon.png</icon>
-  <id>https://jeffsie180.github.io/</id>
-  <link href="https://jeffsie180.github.io/" rel="alternate"/>
-  <link href="https://jeffsie180.github.io/atom.xml" rel="self"/>
+  <icon>https://blog.jeff-sie.com/icon.png</icon>
+  <id>https://blog.jeff-sie.com/</id>
+  <link href="https://blog.jeff-sie.com/" rel="alternate"/>
+  <link href="https://blog.jeff-sie.com/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, Jeff Sie</rights>
   <subtitle>JeffSie 的筆記部落格</subtitle>
   <title>Jeff's Blog</title>
@@ -16,11 +16,11 @@
     <author>
       <name>Jeff Sie</name>
     </author>
-    <category term="NetApp" scheme="https://jeffsie180.github.io/categories/NetApp/"/>
-    <category term="NetApp" scheme="https://jeffsie180.github.io/tags/NetApp/"/>
-    <category term="ONTAP" scheme="https://jeffsie180.github.io/tags/ONTAP/"/>
-    <id>https://jeffsie180.github.io/2026/02/12/NetApp-A250-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%B5%81%E7%A8%8B%E7%B4%80%E9%8C%84/</id>
-    <link href="https://jeffsie180.github.io/2026/02/12/NetApp-A250-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%B5%81%E7%A8%8B%E7%B4%80%E9%8C%84/"/>
+    <category term="NetApp" scheme="https://blog.jeff-sie.com/categories/NetApp/"/>
+    <category term="NetApp" scheme="https://blog.jeff-sie.com/tags/NetApp/"/>
+    <category term="ONTAP" scheme="https://blog.jeff-sie.com/tags/ONTAP/"/>
+    <id>https://blog.jeff-sie.com/2026/02/12/NetApp-A250-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%B5%81%E7%A8%8B%E7%B4%80%E9%8C%84/</id>
+    <link href="https://blog.jeff-sie.com/2026/02/12/NetApp-A250-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%B5%81%E7%A8%8B%E7%B4%80%E9%8C%84/"/>
     <published>2026-02-12T08:33:42.000Z</published>
     <summary>NetApp A250 搭配 ONTAP 9.10 的初始化流程，包含 Advanced Drive Partitioning、Cluster Setup 及時區設定。</summary>
     <title>NetApp A250 初始化流程紀錄</title>

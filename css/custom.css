@@ -1,0 +1,194 @@
+/* ============================================
+   Custom CSS3 Animations for Jeff's Blog
+   ============================================ */
+
+/* ------------------------------------------
+   1. 文章卡片 Hover 浮起效果
+   說明：滑鼠懸停時卡片微微上浮並加深陰影
+   ------------------------------------------ */
+#recent-posts > .recent-post-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#recent-posts > .recent-post-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(33, 150, 243, 0.12);
+}
+
+[data-theme="dark"] #recent-posts > .recent-post-item:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------------------------------
+   2. 導覽列毛玻璃效果
+   說明：固定導覽列使用半透明模糊背景（Apple 風格）
+   ------------------------------------------ */
+#nav {
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  background-color: rgba(255, 255, 255, 0.78) !important;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] #nav {
+  background-color: rgba(18, 18, 18, 0.82) !important;
+}
+
+#nav.fixed.nav-visible {
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+}
+
+/* ------------------------------------------
+   3. 側邊欄卡片依序淡入
+   說明：側邊欄各卡片按順序延遲出現，增加層次感
+   ------------------------------------------ */
+.aside-content .card-widget {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.aside-content .card-widget:nth-child(1) { animation-delay: 0.05s; }
+.aside-content .card-widget:nth-child(2) { animation-delay: 0.1s; }
+.aside-content .card-widget:nth-child(3) { animation-delay: 0.15s; }
+.aside-content .card-widget:nth-child(4) { animation-delay: 0.2s; }
+.aside-content .card-widget:nth-child(5) { animation-delay: 0.25s; }
+.aside-content .card-widget:nth-child(6) { animation-delay: 0.3s; }
+.aside-content .card-widget:nth-child(7) { animation-delay: 0.35s; }
+.aside-content .card-widget:nth-child(8) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------------------
+   4. 滾動淡入動畫（搭配 custom.js）
+   說明：元素進入畫面時從下方淡入
+   ------------------------------------------ */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------------------
+   5. 頭像呼吸光暈效果
+   說明：大頭貼周圍有柔和的脈動光圈，hover 時放大
+   ------------------------------------------ */
+.avatar-img {
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  animation: avatarPulse 3s ease-in-out infinite;
+}
+
+.avatar-img:hover {
+  transform: scale(1.08);
+}
+
+@keyframes avatarPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(33, 150, 243, 0.08);
+  }
+}
+
+[data-theme="dark"] .avatar-img {
+  animation: avatarPulseDark 3s ease-in-out infinite;
+}
+
+@keyframes avatarPulseDark {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(100, 181, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(100, 181, 246, 0.06);
+  }
+}
+
+/* ------------------------------------------
+   6. 程式碼區塊 Hover 高亮邊框
+   說明：懸停程式碼區塊時左側邊框亮起
+   ------------------------------------------ */
+figure.highlight,
+.code-area {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+figure.highlight:hover,
+.code-area:hover {
+  border-left: 3px solid #2196F3;
+  box-shadow: -2px 0 8px rgba(33, 150, 243, 0.1);
+}
+
+[data-theme="dark"] figure.highlight:hover,
+[data-theme="dark"] .code-area:hover {
+  border-left: 3px solid #64B5F6;
+  box-shadow: -2px 0 8px rgba(100, 181, 246, 0.15);
+}
+
+/* ------------------------------------------
+   7. 標籤雲 Hover 效果
+   說明：懸停標籤時微微放大並加深顏色
+   ------------------------------------------ */
+.card-tag-cloud a {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.card-tag-cloud a:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+/* ------------------------------------------
+   8. 分類與彙整列表 Hover 效果
+   說明：懸停時文字右移，帶有平滑過渡
+   ------------------------------------------ */
+.aside-content .aside-list .aside-list-item {
+  transition: transform 0.2s ease;
+}
+
+.aside-content .aside-list .aside-list-item:hover {
+  transform: translateX(4px);
+}
+
+/* ------------------------------------------
+   9. 右下角按鈕群 Hover 放大
+   說明：懸停功能按鈕時微微放大
+   ------------------------------------------ */
+#rightside > div > button,
+#rightside > div > a {
+  transition: transform 0.2s ease;
+}
+
+#rightside > div > button:hover,
+#rightside > div > a:hover {
+  transform: scale(1.15);
+}
+
+/* ------------------------------------------
+   10. 頁尾淡入效果
+   說明：頁尾區域載入時淡入
+   ------------------------------------------ */
+#footer {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
