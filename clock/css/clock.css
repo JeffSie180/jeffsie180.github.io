@@ -17,6 +17,12 @@ padding:20px
     flex-wrap: nowrap;
     white-space: nowrap;
 }
+[data-theme="dark"] .clock-row{
+    color: #E0E0E0;
+}
+[data-theme="dark"] .card-clock-time{
+    color: #64B5F6;
+}
 .card-clock-clockdate, .card-clock-ip{
     text-align: left;
     flex-basis: calc(40% - 5px);
