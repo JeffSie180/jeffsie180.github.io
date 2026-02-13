@@ -11,14 +11,10 @@
     var cd = new Date();
     var timeStr = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
     var dateStr = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth() + 1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
-    var ampm = cd.getHours() >= 12 ? ' PM' : ' AM';
-
     var timeDom = document.getElementById('card-clock-time');
     var dateDom = document.getElementById('card-clock-clockdate');
-    var ampmDom = document.getElementById('card-clock-dackorlight');
     if (timeDom) timeDom.innerHTML = timeStr;
     if (dateDom) dateDom.innerHTML = dateStr;
-    if (ampmDom) ampmDom.innerHTML = ampm;
   }
 
   function initClock(weatherHtml) {
@@ -30,10 +26,7 @@
         '<span id="card-clock-clockdate" class="card-clock-clockdate"></span>' +
         weatherHtml +
       '</div>' +
-      '<div class="clock-row"><span id="card-clock-time" class="card-clock-time"></span></div>' +
-      '<div class="clock-row">' +
-        '<span id="card-clock-dackorlight" class="card-clock-dackorlight"></span>' +
-      '</div>';
+      '<div class="clock-row"><span id="card-clock-time" class="card-clock-time"></span></div>';
 
     updateTime();
     setInterval(updateTime, 1000);
